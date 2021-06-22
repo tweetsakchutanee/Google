@@ -1,0 +1,53 @@
+นำเข้า android.net.Uri;
+
+นำเข้า android.os.Bundle;
+
+นำเข้า android.app.Activity;
+
+นำเข้า android.content.Intent;
+
+นำเข้า android.view.View;
+
+นำเข้า android.view.View.OClickListener;
+
+นำเข้า android.widget ปุ่ม;
+
+นำเข้า android.widget.EditText;
+
+MainActivity ระดับสาธารณะขยายกิจกรรม {
+
+EditText editText1;
+
+ปุ่ม button1;
+
+@แทนที่
+
+โมฆะที่ได้รับการป้องกัน onCreate (Bundle savedInstanceState) {
+
+super.onCreate (saveInstanceState);
+
+setContentView (R.layout.activity_main);
+
+editText1 = (EditText) findViewById (R.id.editText1);
+
+button1 = (ปุ่ม) findViewById (R.id.button1);
+
+button1.setOnClickListener (ใหม่ OnClickListener () {
+
+@แทนที่
+
+โมฆะสาธารณะ onClick (ดู arg0) {
+
+สตริง url = editText1.getText (). toString ();
+
+เจตนาเจตนา = เจตนาใหม่ (Intent.ACTION_VIEW, Uri.parse (url));
+
+startActivity (เจตนา);
+
+}
+
+});
+
+}
+
+}
